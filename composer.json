@@ -1,0 +1,54 @@
+{
+    "name": "chinleung/laravel-str-accents-macro",
+    "description": "A macro to clean accents from a string.",
+    "keywords": [
+        "laravel",
+        "macro"
+    ],
+    "homepage": "https://github.com/chinleung/laravel-str-accents-macro",
+    "license": "MIT",
+    "type": "library",
+    "authors": [
+        {
+            "name": "Chin Leung",
+            "email": "hello@chinleung.com",
+            "role": "Developer"
+        }
+    ],
+    "require": {
+        "php": "^7.1",
+        "illuminate/support": "~5.8.0|^6.0"
+    },
+    "require-dev": {
+        "orchestra/testbench": "3.8.*",
+        "phpunit/phpunit": "^7.0"
+    },
+    "autoload": {
+        "psr-4": {
+            "ChinLeung\\StrAccentsMacro\\": "src"
+        }
+    },
+    "autoload-dev": {
+        "psr-4": {
+            "ChinLeung\\StrAccentsMacro\\Tests\\": "tests"
+        }
+    },
+    "scripts": {
+        "test": "vendor/bin/phpunit",
+        "test-coverage": "vendor/bin/phpunit --coverage-html coverage"
+
+    },
+    "config": {
+        "sort-packages": true
+    },
+    "extra": {
+        "laravel": {
+            "providers": [
+                "ChinLeung\\StrAccentsMacro\\StrAccentsMacroServiceProvider"
+            ],
+            "aliases": {
+                "StrAccentsMacro": "ChinLeung\\StrAccentsMacro\\StrAccentsMacroFacade"
+            }
+        }
+    }
+}
